@@ -48,7 +48,7 @@ Inicialmente, el dataset no estaba dividido en sets de train y test. Por lo que 
 
 Dado que el dataset inicial cuenta con 4752 imágenes, a las que se aplicarán técnicas de escalamiento, utilizaremos el 70% de los datos para entrenar al modelo y poder realizar las técnicas de clasificación de desechos, de manera que los parámetros del modelo sean ajustados y optimizados usando estos ejemplos, una vez que sea entrenado, utilizaremos un 10% para validar qué tan bien clasifica nuestro modelo, una vez que nuestro modelo tenga un buen rendimiento, utilizaremos el 20% restante para probarlo.
 
-El enlace para acceder a los directorios divididos es el siguiente: [Dataset](https://drive.google.com/drive/folders/15qHsKJlguvv3mBKYhYBcgTRdKG2kicfi?usp=sharing)
+El enlace para acceder a los directorios divididos es el siguiente: [Dataset](https://drive.google.com/drive/folders/15qHsKJlguvv3mBKYhYBcgTRdKG2kicfi?usp=sharing).
 
 - **Aplicar las técnicas de escalamiento.**
 
