@@ -53,12 +53,27 @@ El enlace para acceder a los directorios divididos es el siguiente: [Dataset](ht
 - **Aplicar las técnicas de escalamiento.**
 
 Las técnicas de escalamiento aplicadas fueron las siguientes:
+    zoom_range = 0.05,
+    ,
+    
 
-- 
+**rescale = 1/255:** Normaliza los valores de los píxeles de las imágenes dividiéndolos por 255. Esto escala los valores de los píxeles para que estén en el rango [0, 1]. Asegura que los valores de los píxeles estén en una escala adecuada para el procesamiento por el modelo.
+
+**rotation_range = 40:** Aplica una rotación aleatoria a las imágenes dentro del rango especificado en grados. Introduce variabilidad en las imágenes.
+
+**width_shift_range = 0.1:** Realiza un desplazamiento horizontal aleatorio a las imágenes dentro del rango especificado. En este caso utilizamos 0.1 para que los desechos no salgan demasiado de la imagen.
+
+**height_shift_range = 0.1:** Realiza un desplazamiento vertical aleatorio a las imágenes dentro del rango especificado. En este caso utilizamos 0.1 para que los desechos no salgan demasiado de la imagen.
+
+**zoom_range = 0.05:** Aplica un zoom aleatorio a las imágenes dentro del rango especificado. Estamos utilizando 0.05 para crear imágenes variadas que no modifiquen demasiado la imagen original.
+
+**horizontal_flip = True:** Voltea horizontalmente aleatoriamente las imágenes. Agrega variabilidad al conjunto de datos al reflejar las imágenes horizontalmente.
+
+**fill_mode='reflect':** Especifica cómo rellenar los píxeles que pueden quedar vacíos después de aplicar transformaciones. Estamos utilizando reflect para rellenar con valores reflejados los píxeles que quedan vacíos para mantener la integridad visual de las imágenes.
 
 - **Hacer el preprocesado pertinente de los datos.**
 
-En este caso, el escalado (normalización de los valores de los pixeles) de los datos se realizó como parte del preprocesamiento.
+En este caso, el escalado (normalización de los valores de los pixeles) de los datos se realizó como parte del preprocesamiento para los conjuntos de entrenamiento y validación.
 
 ## Licencia
 
