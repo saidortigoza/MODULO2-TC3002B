@@ -34,6 +34,8 @@ El dataset RealWaste se puede acceder y descargar desde el siguiente enlace: [Re
 
 - **Obtener, generar o aumentar un set de datos.**
 
+El dataset utilizado para este proyecto, RealWaste, fue obtenido del [UCI Machine Learning Repository](https://archive.ics.uci.edu/dataset/908/realwaste). Contiene imágenes clasificadas en diversas categorías de desechos. Estas imágenes se utilizarán para desarrollar un modelo de clasificación.
+
 - **Hacer la separación de los sets de prueba y entrenamiento.**
 
 - **Aplicar las técnicas de escalamiento.**
