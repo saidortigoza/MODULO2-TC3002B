@@ -53,9 +53,6 @@ El enlace para acceder a los directorios divididos es el siguiente: [Dataset](ht
 - **Aplicar las técnicas de escalamiento.**
 
 Las técnicas de escalamiento aplicadas fueron las siguientes:
-    zoom_range = 0.05,
-    ,
-    
 
 **rescale = 1/255:** Normaliza los valores de los píxeles de las imágenes dividiéndolos por 255. Esto escala los valores de los píxeles para que estén en el rango [0, 1]. Asegura que los valores de los píxeles estén en una escala adecuada para el procesamiento por el modelo.
 
