@@ -38,9 +38,25 @@ El dataset utilizado para este proyecto, RealWaste, fue obtenido del [UCI Machin
 
 - **Hacer la separación de los sets de prueba y entrenamiento.**
 
+Inicialmente, el dataset no estaba dividido en sets de train y test. Por lo que se realizó una división del dataset inicial para dichos conjuntos, siendo dividido de la siguiente manera:
+
+- Entrenamiento: 70%.
+
+- Prueba: 20%.
+
+- Validación: 10%.
+
+Dado que el dataset inicial cuenta con 4752 imágenes, a las que se aplicarán técnicas de escalamiento, utilizaremos el 70% de los datos para entrenar al modelo y poder realizar las técnicas de clasificación de desechos, de manera que los parámetros del modelo sean ajustados y optimizados usando estos ejemplos, una vez que sea entrenado, utilizaremos un 10% para validar qué tan bien clasifica nuestro modelo, una vez que nuestro modelo tenga un buen rendimiento, utilizaremos el 20% restante para probarlo.
+
 - **Aplicar las técnicas de escalamiento.**
 
+Las técnicas de escalamiento aplicadas fueron las siguientes:
+
+- 
+
 - **Hacer el preprocesado pertinente de los datos.**
+
+En este caso, el escalado (normalización de los valores de los pixeles) de los datos se realizó como parte del preprocesamiento.
 
 ## Licencia
 
