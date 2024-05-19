@@ -10,7 +10,7 @@ Enlace al dataset:
 
 ## Actividades
 
-*- Obtener, generar o aumentar un set de datos.*
+- **Obtener, generar o aumentar un set de datos.**
 
 - Hacer la separación de los sets de prueba y entrenamiento.
 
