@@ -12,11 +12,11 @@ Enlace al dataset:
 
 - **Obtener, generar o aumentar un set de datos.**
 
-- Hacer la separación de los sets de prueba y entrenamiento.
+- **Hacer la separación de los sets de prueba y entrenamiento.**
 
-- Aplicar las técnicas de escalamiento.
+- **Aplicar las técnicas de escalamiento.**
 
-- Hacer el preprocesado pertinente de los datos.
+- **Hacer el preprocesado pertinente de los datos.**
 
 ## Licencia
 
