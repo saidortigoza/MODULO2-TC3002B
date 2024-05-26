@@ -84,6 +84,12 @@ Para implementar el modelo, se seleccionó el framework TensorFlow de Google, un
 
 - **Reportar resultados obtenidos e interpretarlos.**
 
+## Referencias
+
+- UCI Machine Learning Repository. (2023). Uci.edu. https://archive.ics.uci.edu/dataset/908/realwaste
+
+- Referencia del paper aquí.
+
 ## Licencia
 
 Este proyecto está licenciado bajo la Licencia MIT. Consulta el archivo LICENSE para más detalles.
