@@ -68,6 +68,8 @@ Las técnicas de escalamiento aplicadas fueron las siguientes:
 
 **fill_mode='reflect':** Especifica cómo rellenar los píxeles que pueden quedar vacíos después de aplicar transformaciones. Estamos utilizando reflect para rellenar con valores reflejados los píxeles que quedan vacíos para mantener la integridad visual de las imágenes.
 
+Este set de datos se utiliza para generar imágenes significativas para el modelo. Se probó a utilizar diferentes desplazamientos horizontales y verticales, zoom y fill mode, por ejemplo, *nearest*, sin embargo, los valores actuales fueron seleccionados porque no distorsionan demasiado las imágenes, siendo generadas imágenes de mejor calidad.
+
 - **Hacer el preprocesado pertinente de los datos.**
 
 En este caso, el escalado (normalización de los valores de los pixeles) de los datos se realizó como parte del preprocesamiento para los conjuntos de entrenamiento y validación.
