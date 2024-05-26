@@ -74,6 +74,14 @@ Este set de datos se utiliza para generar imágenes significativas para el model
 
 En este caso, el escalado (normalización de los valores de los pixeles) de los datos se realizó como parte del preprocesamiento para los conjuntos de entrenamiento y validación.
 
+- **Seleccionar un modelo respaldado por un paper del estado del arte.**
+
+- **Implementar el modelo usando un framework seleccionado.**
+
+- **Seleccionar métricas adecuadas respaldadas por un paper del estado del arte.**
+
+- **Reportar resultados obtenidos e interpretarlos.**
+
 ## Licencia
 
 Este proyecto está licenciado bajo la Licencia MIT. Consulta el archivo LICENSE para más detalles.
