@@ -78,6 +78,8 @@ En este caso, el escalado (normalización de los valores de los pixeles) de los 
 
 - **Implementar el modelo usando un framework seleccionado.**
 
+Para implementar el modelo, se seleccionó el framework TensorFlow de Google, una de las bibliotecas más populares y utilizadas para el desarrollo de modelos de aprendizaje automático y redes neuronales, lo que facilita el desarrollo del modelo de clasificación.
+
 - **Seleccionar métricas adecuadas respaldadas por un paper del estado del arte.**
 
 - **Reportar resultados obtenidos e interpretarlos.**
