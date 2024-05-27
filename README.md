@@ -130,7 +130,7 @@ De acuerdo con los artículos consultados, las métricas para evaluar el rendimi
 
 Después de entrenar el modelo con 10 epochs, los resultados obtenidos se evaluaron en términos de precisión y pérdida en los conjuntos de entrenamiento y validación. Además, se incluye una matriz de confusión.
 
-IMAGEN
+![](https://github.com/saidortigoza/MODULO2-TC3002B/blob/main/img/accuray_loss_graphs.png)
 
 La precisión de train muestra una tendencia alcista, llegando a más del 70%. La precisión de validation también mejora inicialmente y muestra una tendencia alcista, alcanzando un valor máximo de casi 70%, pero luego muestra cierta variabilidad con una ligera disminución al final.
 
@@ -144,7 +144,7 @@ Sin embargo, las curvas no son perfectamente paralelas y muestran mucha variabil
 
 Adicionalmente, como parte de la evaluación se incluye una matriz de confusión. Incluir una matriz de confusión como parte de la evaluación es fundamental porque ofrece una visión detallada del rendimiento del modelo en cada clase individual.
 
-IMAGEN
+![](https://github.com/saidortigoza/MODULO2-TC3002B/blob/main/img/confusion_matrix.png)
 
 Las etiquetas corresponden a lo siguiente:
 0: Cardboard & Paper
@@ -154,6 +154,8 @@ Las etiquetas corresponden a lo siguiente:
 4: Plastic
 
 Los valores de la diagonal corresponden con los valores estimados de forma correcta por el modelo, podemos observar que la mayoría de las clases tienen predicciones aceptables, con exepción de la clase plastic, la cual tiene muchísimas predicciones como si fuera cardboard & paper. Esto sugiere que el dataset también puede mejorar, existen entre las imágenes revistas, envases de cartón, hojas blancas, que el modelo confundió con plástico blanco, como por ejemplo, frascos de pastillas o tapas.
+
+![](https://github.com/saidortigoza/MODULO2-TC3002B/blob/main/img/predictions.png)
 
 ## Referencias
 
