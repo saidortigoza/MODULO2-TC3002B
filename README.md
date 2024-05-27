@@ -84,7 +84,35 @@ La adaptación de esta arquitectura en el proyecto fue una pieza clave en el ini
 
 Se realizaron diversos ajustes, entre ellos, se experimentó con ajustes en el modelo que crearon demasiado overfitting, debido a que la accuracy del conjunto train que se obtuvo fue alta, pero la accuracy del conjunto de validación no se aceraba para nada, siendo algunos casos, por ejemplo, un 75% de accuracy, y un 30% de val_accuracy.
 
-El modelo final desarrollado se explica a continuación:
+Adicionalmente, para efectos prácticos se modificó el dataset, reduciendo las clases de 9 a solamente 5 (Cardboard & Paper, Food Organics, Glass, Metal y Plastic).
+
+El modelo final consta de varias capas que se organizan secuencialmente utilizando la clase Sequential de Keras. A continuación se detalla cada capa y su función:
+
+**Capa de Convolución (Conv2D):** Realiza la convolución de los filtros sobre la imagen de entrada para extraer características como bordes, texturas y patrones visuales.
+
+Filtrado: 16 filtros.
+Tamaño del kernel: 3x3.
+Función de activación: ReLU.
+Tamaño de entrada: (150, 150, 3). El tamaño establecido previamente cuando se cargaron los conjuntos.
+
+**Capa de pooling (MaxPooling2D):** Reduce la dimensionalidad de las características extraídas por la capa de convolución, conservando las características más relevantes.
+
+Tamaño de la ventana de pooling: 2x2.
+
+**Segunda Capa de Convolución (Conv2D):** Similar a la primera capa, pero con 32 filtros en lugar de 16.
+
+**MaxPooling (MaxPooling2D):** Se utiliza otra capa de pooling de 2x2 para capturar características más complejas y abstractas de la imagen.
+
+**Capa de Aplanado (Flatten):** Convierte las características 2D obtenidas de las capas convolucionales y de pooling en un vector unidimensional, que se utilizará como entrada para las capas completamente conectadas.
+
+**Capas Densas (Dense):** Realizan la clasificación final basada en las características extraídas por las capas convolucionales y de pooling.
+
+Dos capas densas con 32 y 5 neuronas respectivamente.
+Función de activación ReLU en la primera capa densa y función de activación Softmax en la última capa densa para la clasificación multiclase.
+
+**Capa de Normalización por Lotes (BatchNormalization):** Normaliza las activaciones de la capa anterior, lo que ayuda a acelerar el entrenamiento y mejorar la estabilidad del modelo.
+
+El modelo se compila utilizando el optimizador Adam, que adapta la tasa de aprendizaje de forma adaptativa. La función de pérdida se establece como categorical_crossentropy, adecuada para problemas de clasificación multiclase, en este caso 5. La métrica de evaluación se establece en precisión (accuracy) para monitorear el rendimiento del modelo durante el entrenamiento.
 
 - **Implementar el modelo usando un framework seleccionado.**
 
@@ -92,7 +120,40 @@ Para implementar el modelo, se seleccionó el framework TensorFlow de Google, un
 
 - **Seleccionar métricas adecuadas respaldadas por un paper del estado del arte.**
 
+De acuerdo con los artículos consultados, las métricas para evaluar el rendimiento del modelo incluyen:
+
+**Precisión (accuracy):** Mide la proporción de predicciones correctas sobre el total de predicciones. Fundamental para problemas de clasificación.
+
+**Pérdida (loss):** La función de pérdida utilizada es categorical_crossentropy, que es adecuada para problemas de clasificación multiclase.
+
 - **Reportar resultados obtenidos e interpretarlos.**
+
+Después de entrenar el modelo con 10 epochs, los resultados obtenidos se evaluaron en términos de precisión y pérdida en los conjuntos de entrenamiento y validación. Además, se incluye una matriz de confusión.
+
+IMAGEN
+
+La precisión de train muestra una tendencia alcista, llegando a más del 70%. La precisión de validation también mejora inicialmente y muestra una tendencia alcista, alcanzando un valor máximo de casi 70%, pero luego muestra cierta variabilidad con una ligera disminución al final.
+
+La pérdida de train disminuye de manera constante a lo largo de las épocas, lo cual es una señal de que el modelo está aprendiendo. La pérdida de validation inicialmente disminuye, pero luego muestra cierta variabilidad, con picos en varias epochs antes de volver a disminuir hacia el final.
+
+No parece haber indicios de overfitting severo, ya que las curvas de pérdida de entrenamiento y validación no se están separando drásticamente, y ambas muestran tendencia al alza. Sin embargo, la variabilidad en la precisión y pérdida de validation sugiere que el modelo podría beneficiarse de ajustes.
+
+Según el comportamiento del modelo, no parece haber underfitting. La precisión de ambos conjuntos es razonablemente alta.
+
+Sin embargo, las curvas no son perfectamente paralelas y muestran mucha variabilidad en el conjunto de validation, lo que sugiere mejoras. Por lo que el modelo muestra un ligero overfitting.
+
+Adicionalmente, como parte de la evaluación se incluye una matriz de confusión. Incluir una matriz de confusión como parte de la evaluación es fundamental porque ofrece una visión detallada del rendimiento del modelo en cada clase individual.
+
+IMAGEN
+
+Las etiquetas corresponden a lo siguiente:
+0: Cardboard & Paper
+1: Food Organics
+2: Glass
+3: Metal
+4: Plastic
+
+Los valores de la diagonal corresponden con los valores estimados de forma correcta por el modelo, podemos observar que la mayoría de las clases tienen predicciones aceptables, con exepción de la clase plastic, la cual tiene muchísimas predicciones como si fuera cardboard & paper. Esto sugiere que el dataset también puede mejorar, existen entre las imágenes revistas, envases de cartón, hojas blancas, que el modelo confundió con plástico blanco, como por ejemplo, frascos de pastillas o tapas.
 
 ## Referencias
 
