@@ -76,6 +76,16 @@ En este caso, el escalado (normalización de los valores de los pixeles) de los 
 
 - **Seleccionar un modelo respaldado por un paper del estado del arte.**
 
+Se realizó la implementación de una Red Neuronal Convolucional (CNN), inspirada en la investigación presentada en el artículo "Deep Convolutional Neural Network with TensorFlow and Keras to Classify Skin Cancer Images". Esta elección se fundamenta en la robustez y eficacia demostrada por el modelo propuesto, que utiliza técnicas avanzadas de aprendizaje profundo para la clasificación precisa de imágenes de cáncer de piel.
+
+Una CNN es un tipo de red neuronal artificial diseñada específicamente para el procesamiento de imágenes. Se compone de múltiples capas, incluyendo capas de convolución, activación y pooling. La capa de convolución resulta fundamental para la CNN, ya que aplica filtros a la imagen de entrada para detectar características como bordes, formas y texturas, siendo específicamente útil para el contexto de este proyecto. La capa de pooling reduce la dimensionalidad de las características extraídas, lo que ayuda a mejorar la eficiencia computacional y a evitar el sobreajuste.
+
+La adaptación de esta arquitectura en el proyecto fue una pieza clave en el inicio del desarrollo, sin embargo, no se utiliza en el modelo final el modelo propuesto por el paper debido a que la CNN del paper era demasiado compleja, siendo este punto justificado debido a que se trata de un modelo de clasificación de cáncer de piel. Pero para el caso de clasificación de residuos, resultó demasiado contraproducente, consumía demasiados recursos (epochs de alrededor de 10 minutos cada uno), y después de experimentar con 5 epochs, el modelo únicamente logró un accuracy no mayor al 20%.
+
+Se realizaron diversos ajustes, entre ellos, se experimentó con ajustes en el modelo que crearon demasiado overfitting, debido a que la accuracy del conjunto train que se obtuvo fue alta, pero la accuracy del conjunto de validación no se aceraba para nada, siendo algunos casos, por ejemplo, un 75% de accuracy, y un 30% de val_accuracy.
+
+El modelo final desarrollado se explica a continuación:
+
 - **Implementar el modelo usando un framework seleccionado.**
 
 Para implementar el modelo, se seleccionó el framework TensorFlow de Google, una de las bibliotecas más populares y utilizadas para el desarrollo de modelos de aprendizaje automático y redes neuronales, lo que facilita el desarrollo del modelo de clasificación.
