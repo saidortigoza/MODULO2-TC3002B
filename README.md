@@ -88,7 +88,11 @@ Para implementar el modelo, se seleccionó el framework TensorFlow de Google, un
 
 - UCI Machine Learning Repository. (2023). Uci.edu. https://archive.ics.uci.edu/dataset/908/realwaste
 
-- Referencia del paper aquí.
+- Lee, H., Lee, N., & Lee, S. (2022). A Method of Deep Learning Model Optimization for Image Classification on Edge Device. Sensors, 22(19), 7344. https://doi.org/10.3390/s22197344
+
+- Nasir, Israa & Al-Talib, Ghaidaa. (2023). Waste Classification Using Artificial Intelligence Techniques:Literature Review. Technium: Romanian Journal of Applied Sciences and Technology. 5. 49-59. 10.47577/technium.v5i.8345.
+
+- Houssam Benbrahim, Hanaâ Hachimi, & Amine, A. (2020). Deep Convolutional Neural Network with TensorFlow and Keras to Classify Skin Cancer Images. Scalable Computing. Practice and Experience, 21(3), 379–390. https://doi.org/10.12694/scpe.v21i3.1725
 
 ## Licencia
 
