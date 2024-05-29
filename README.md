@@ -98,7 +98,7 @@ La adaptación de esta arquitectura en el proyecto fue una pieza clave en el ini
 
 Se realizaron diversos ajustes, entre ellos, se experimentó con ajustes en el modelo que crearon demasiado overfitting, debido a que la accuracy del conjunto train que se obtuvo fue alta, pero la accuracy del conjunto de validación no se aceraba para nada, siendo algunos casos, por ejemplo, un 75% de accuracy, y un 30% de val_accuracy.
 
-Adicionalmente, para efectos prácticos se modificó el dataset, reduciendo las clases de 9 a solamente 5 (Cardboard & Paper, Food Organics, Glass, Metal y Plastic).
+Adicionalmente, como se mencionó anteriormente se modificó el dataset, reduciendo las clases de 9 a solamente 5 (Cardboard, Food Organics, Glass, Metal y Plastic).
 
 El modelo final consta de varias capas que se organizan secuencialmente utilizando la clase Sequential de Keras. A continuación se detalla cada capa y su función:
 
