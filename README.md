@@ -8,7 +8,9 @@ Este proyecto desarrolla un clasificador de desechos utilizando técnicas de apr
 
 El dataset RealWaste proviene del repositorio de aprendizaje automático de la Universidad de California, Irvine (UCI) y se utiliza para el desarrollo de sistemas de clasificación de desechos. El dataset se emplea para entrenar y evaluar modelos de aprendizaje supervisado con el objetivo de clasificar diferentes tipos de residuos.
 
-El dataset contiene 4752 imágenes de residuos etiquetados en varias categorías:
+El dataset contiene 4752 imágenes de residuos etiquetados en las siguientes categorías:
+
+- Cartón: 461 imágenes
 
 - Orgánicos: 411 imágenes.
 
