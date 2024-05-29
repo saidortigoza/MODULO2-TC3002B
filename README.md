@@ -38,13 +38,25 @@ El dataset RealWaste se puede acceder y descargar desde el siguiente enlace: [Re
 
 El dataset utilizado para este proyecto, RealWaste, fue obtenido del [UCI Machine Learning Repository](https://archive.ics.uci.edu/dataset/908/realwaste). Contiene imágenes clasificadas en diversas categorías de desechos. Estas imágenes se utilizarán para desarrollar un modelo de clasificación.
 
+Previo a realizar la separación, el dataset inicial fue modificado, quedando de la siguiente manera, únicamente 5 clases:
+
+- Cardboard: 461 imágenes.
+
+- Food Organics: 411 imágenes.
+
+- Glass: 420 imágenes.
+
+- Metal: 474 imágenes.
+
+- Plastic: 489 imágenes.
+
 - **Hacer la separación de los sets de prueba y entrenamiento.**
 
 Inicialmente, el dataset no estaba dividido en sets de train y test. Por lo que se realizó una división del dataset inicial para dichos conjuntos, siendo dividido de la siguiente manera:
 
-- Entrenamiento: 70%.
+- Entrenamiento: 80%.
 
-- Prueba: 20%.
+- Prueba: 10%.
 
 - Validación: 10%.
 
