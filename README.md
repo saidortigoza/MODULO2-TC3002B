@@ -6,7 +6,7 @@ Este proyecto desarrolla un clasificador de desechos utilizando técnicas de apr
 
 ## Descripción del Dataset
 
-El dataset RealWaste proviene del repositorio de aprendizaje automático de la Universidad de California, Irvine (UCI) y se utiliza para el desarrollo de sistemas de clasificación de desechos. El dataset se emplea para entrenar y evaluar modelos de aprendizaje supervisado con el objetivo de clasificar diferentes tipos de residuos.
+El dataset RealWaste proviene del repositorio de aprendizaje automático de la Universidad de California, Irvine (UCI) y se utiliza para el desarrollo de sistemas de clasificación de desechos. El dataset se emplea para entrenar y evaluar modelos de aprendizaje supervisado con el objetivo de clasificar diferentes tipos de residuos. (UCI Machine Learning Repository, 2023)
 
 El dataset contiene 4752 imágenes de residuos etiquetados en las siguientes categorías:
 
@@ -60,7 +60,7 @@ Inicialmente, el dataset no estaba dividido en sets de train y test. Por lo que 
 
 - Validación: 10%.
 
-Dado que el dataset inicial cuenta con 4752 imágenes, a las que se aplicarán técnicas de escalamiento, utilizaremos el 70% de los datos para entrenar al modelo y poder realizar las técnicas de clasificación de desechos, de manera que los parámetros del modelo sean ajustados y optimizados usando estos ejemplos, una vez que sea entrenado, utilizaremos un 10% para validar qué tan bien clasifica nuestro modelo, una vez que nuestro modelo tenga un buen rendimiento, utilizaremos el 20% restante para probarlo.
+Dado que el dataset inicial cuenta con 4752 imágenes, a las que se aplicarán técnicas de escalamiento, utilizaremos el 80% de los datos para entrenar al modelo y poder realizar las técnicas de clasificación de desechos, de manera que los parámetros del modelo sean ajustados y optimizados usando estos ejemplos, una vez que sea entrenado, utilizaremos un 10% para validar qué tan bien clasifica nuestro modelo, una vez que nuestro modelo tenga un buen rendimiento, utilizaremos el 10% restante para probarlo.
 
 El enlace para acceder a los directorios divididos es el siguiente: [Dataset](https://drive.google.com/drive/folders/15qHsKJlguvv3mBKYhYBcgTRdKG2kicfi?usp=sharing).
 
@@ -90,9 +90,9 @@ En este caso, el escalado (normalización de los valores de los pixeles) de los 
 
 - **Seleccionar un modelo respaldado por un paper del estado del arte.**
 
-Se realizó la implementación de una Red Neuronal Convolucional (CNN), inspirada en la investigación presentada en el artículo "Deep Convolutional Neural Network with TensorFlow and Keras to Classify Skin Cancer Images". Esta elección se fundamenta en la robustez y eficacia demostrada por el modelo propuesto, que utiliza técnicas avanzadas de aprendizaje profundo para la clasificación precisa de imágenes de cáncer de piel.
+Se realizó la implementación de una Red Neuronal Convolucional (CNN), inspirada en la investigación presentada en el artículo "Deep Convolutional Neural Network with TensorFlow and Keras to Classify Skin Cancer Images". Esta elección se fundamenta en la robustez y eficacia demostrada por el modelo propuesto, que utiliza técnicas avanzadas de aprendizaje profundo para la clasificación precisa de imágenes de cáncer de piel. (Lee et al., 2022)
 
-Una CNN es un tipo de red neuronal artificial diseñada específicamente para el procesamiento de imágenes. Se compone de múltiples capas, incluyendo capas de convolución, activación y pooling. La capa de convolución resulta fundamental para la CNN, ya que aplica filtros a la imagen de entrada para detectar características como bordes, formas y texturas, siendo específicamente útil para el contexto de este proyecto. La capa de pooling reduce la dimensionalidad de las características extraídas, lo que ayuda a mejorar la eficiencia computacional y a evitar el sobreajuste.
+Una CNN es un tipo de red neuronal artificial diseñada específicamente para el procesamiento de imágenes. Se compone de múltiples capas, incluyendo capas de convolución, activación y pooling. La capa de convolución resulta fundamental para la CNN, ya que aplica filtros a la imagen de entrada para detectar características como bordes, formas y texturas, siendo específicamente útil para el contexto de este proyecto. La capa de pooling reduce la dimensionalidad de las características extraídas, lo que ayuda a mejorar la eficiencia computacional y a evitar el sobreajuste. (Lee et al., 2022)
 
 La adaptación de esta arquitectura en el proyecto fue una pieza clave en el inicio del desarrollo, sin embargo, no se utiliza en el modelo final el modelo propuesto por el paper debido a que la CNN del paper era demasiado compleja, siendo este punto justificado debido a que se trata de un modelo de clasificación de cáncer de piel. Pero para el caso de clasificación de residuos, resultó demasiado contraproducente, consumía demasiados recursos (epochs de alrededor de 10 minutos cada uno), y después de experimentar con 5 epochs, el modelo únicamente logró un accuracy no mayor al 20%.
 
@@ -134,7 +134,7 @@ Para implementar el modelo, se seleccionó el framework TensorFlow de Google, un
 
 - **Seleccionar métricas adecuadas respaldadas por un paper del estado del arte.**
 
-De acuerdo con los artículos consultados, las métricas para evaluar el rendimiento del modelo incluyen:
+De acuerdo con los artículos consultados,(Lee et al., 2022), (Nasir & Aziz, 2023)  las métricas para evaluar el rendimiento del modelo incluyen:
 
 **Precisión (accuracy):** Mide la proporción de predicciones correctas sobre el total de predicciones. Fundamental para problemas de clasificación.
 
