@@ -183,7 +183,7 @@ No se observan signos de overfitting severo, ya que las curvas de precisión no 
 
 ![](https://github.com/saidortigoza/MODULO2-TC3002B/blob/main/img/confusion_matrix_newmodel.png)
 
-En cuanto a la matriz de confusión, los valores en la diagonal indican predicciones correctas con un mayor número que el modelo anterior. La mayoría de las clases tienen predicciones aceptables, con presencias leves de sesgo en algunas clases.
+En cuanto a la matriz de confusión, los valores en la diagonal indican predicciones correctas con un mayor número que el modelo anterior. La mayoría de las clases tienen predicciones aceptables, con presencias leves de sesgo en algunas clases. Incluso las predicciones anteriores, como la clase Plastic que anteriormente era clasificada como Cardboard, se redujo a 2 ocurrencias.
 
 - **Ajustar los hiper parámetros del modelo o la arquitectura**
 
