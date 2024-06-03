@@ -171,6 +171,32 @@ Los valores de la diagonal corresponden con los valores estimados de forma corre
 
 ![](https://github.com/saidortigoza/MODULO2-TC3002B/blob/main/img/predictions.png)
 
+- **Medir el desempeño del modelo actual**
+
+Se realizaron cambios en la arquitectura del modelo y después de entrenarlo durante 30 epochs, los resultados se evaluaron con las métricas anteriores para los 3 conjuntos, incluyendo una matriz de confusión.
+
+IMAGEN
+
+La precisión en el conjunto de entrenamiento alcanza el 80% y muestra una tendencia al alza. La precisión en validación mejora inicialmente, alcanzando como punto máximo el 75%, aunque presenta cierta variabilidad y disminuye un poco al final. La pérdida en el conjunto de entrenamiento disminuye constantemente, indicando un aprendizaje efectivo del modelo. En validación, la pérdida también disminuye inicialmente pero experimenta fluctuaciones significativas antes de estabilizarse.
+
+No se observan signos de overfitting severo, ya que las curvas de precisión no se separan drásticamente y ambas muestran una tendencia ascendente. Sin embargo, aún se observa variabilidad en la validación.
+
+IMAGEN
+
+En cuanto a la matriz de confusión, los valores en la diagonal indican predicciones correctas con un mayor número que el modelo anterior. La mayoría de las clases tienen predicciones aceptables, con presencias leves de sesgo en algunas clases.
+
+- **Ajustar los hiper parámetros del modelo o la arquitectura**
+
+Se realizaron cambios únicamente en la arquitectura del modelo. A partir de que observé el comportamiento de las capas convolutivas en el modelo anterior, y debido a que se encargan de extraer características y detalles de las imágenes, decidí incluir una capa extra convolutiva, acompañada de una capa de pooling para reducir las dimensiones de la imagen pero conservar las características más relevantes de los datos.
+
+- **Comparar con el desempeño anterior y reportar mejoras**
+
+El modelo mejoró en precisión y reducción de pérdida. A pesar de eso, aún existe variabilidad leve en ambas métricas a lo largo de las épocas de entrenamiento del modelo.
+
+IMAGEN
+
+El modelo actual supera casi en un 10% al anterior en la precisión del conjunto de entrenamiento, y un 5% para el conjunto de validación. Además, la variabilidad se redujo muy significativamente, esto puede ser debido a que se agregó una capa convolutiva de 32 filtros extra, justamente para detectar más la presencia de características específicas de cada imagen que el modelo recibió para aprender. Anteriormente no se incluía la precisión y pérdida del conjunto de prueba, por lo que no hay un punto de comparación, sin embargo, los valores para prueba fueron una pérdida de 0.89 y una precisión del 72%, métricas bastante más cercanas al conjunto de entrenamiento.
+
 ## Referencias
 
 - UCI Machine Learning Repository. (2023). Uci.edu. https://archive.ics.uci.edu/dataset/908/realwaste
