@@ -175,13 +175,13 @@ Los valores de la diagonal corresponden con los valores estimados de forma corre
 
 Se realizaron cambios en la arquitectura del modelo y después de entrenarlo durante 30 epochs, los resultados se evaluaron con las métricas anteriores para los 3 conjuntos, incluyendo una matriz de confusión.
 
-IMAGEN
+![](https://github.com/saidortigoza/MODULO2-TC3002B/blob/main/img/accuracy_loss_graphs_newmodel.png)
 
 La precisión en el conjunto de entrenamiento alcanza el 80% y muestra una tendencia al alza. La precisión en validación mejora inicialmente, alcanzando como punto máximo el 75%, aunque presenta cierta variabilidad y disminuye un poco al final. La pérdida en el conjunto de entrenamiento disminuye constantemente, indicando un aprendizaje efectivo del modelo. En validación, la pérdida también disminuye inicialmente pero experimenta fluctuaciones significativas antes de estabilizarse.
 
 No se observan signos de overfitting severo, ya que las curvas de precisión no se separan drásticamente y ambas muestran una tendencia ascendente. Sin embargo, aún se observa variabilidad en la validación.
 
-IMAGEN
+![](https://github.com/saidortigoza/MODULO2-TC3002B/blob/main/img/confusion_matrix_newmodel.png)
 
 En cuanto a la matriz de confusión, los valores en la diagonal indican predicciones correctas con un mayor número que el modelo anterior. La mayoría de las clases tienen predicciones aceptables, con presencias leves de sesgo en algunas clases.
 
@@ -193,7 +193,7 @@ Se realizaron cambios únicamente en la arquitectura del modelo. A partir de que
 
 El modelo mejoró en precisión y reducción de pérdida. A pesar de eso, aún existe variabilidad leve en ambas métricas a lo largo de las épocas de entrenamiento del modelo.
 
-IMAGEN
+![](https://github.com/saidortigoza/MODULO2-TC3002B/blob/main/img/train_val_test_graphs.png)
 
 El modelo actual supera casi en un 10% al anterior en la precisión del conjunto de entrenamiento, y un 5% para el conjunto de validación. Además, la variabilidad se redujo muy significativamente, esto puede ser debido a que se agregó una capa convolutiva de 32 filtros extra, justamente para detectar más la presencia de características específicas de cada imagen que el modelo recibió para aprender. Anteriormente no se incluía la precisión y pérdida del conjunto de prueba, por lo que no hay un punto de comparación, sin embargo, los valores para prueba fueron una pérdida de 0.89 y una precisión del 72%, métricas bastante más cercanas al conjunto de entrenamiento.
 
