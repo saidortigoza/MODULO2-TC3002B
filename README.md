@@ -60,9 +60,9 @@ Inicialmente, el dataset no estaba dividido en sets de train y test. Por lo que 
 
 - Validación: 10%.
 
-Dado que el dataset inicial cuenta con 4752 imágenes, a las que se aplicarán técnicas de escalamiento, utilizaremos el 80% de los datos para entrenar al modelo y poder realizar las técnicas de clasificación de desechos, de manera que los parámetros del modelo sean ajustados y optimizados usando estos ejemplos, una vez que sea entrenado, utilizaremos un 10% para validar qué tan bien clasifica nuestro modelo, una vez que nuestro modelo tenga un buen rendimiento, utilizaremos el 10% restante para probarlo.
+Dado que el dataset modificado cuenta con 2255 imágenes totales, a las que se aplicarán técnicas de escalamiento, utilizaremos el 80% de los datos para entrenar al modelo y poder realizar las técnicas de clasificación de desechos, de manera que los parámetros del modelo sean ajustados y optimizados usando estos ejemplos, una vez que sea entrenado, utilizaremos un 10% para validar qué tan bien clasifica nuestro modelo, una vez que nuestro modelo tenga un buen rendimiento, utilizaremos el 10% restante para probarlo.
 
-El enlace para acceder a los directorios divididos es el siguiente: [Dataset](https://drive.google.com/drive/folders/15qHsKJlguvv3mBKYhYBcgTRdKG2kicfi?usp=sharing).
+El enlace para acceder a los directorios del dataset es el siguiente: [Dataset](https://drive.google.com/drive/folders/15qHsKJlguvv3mBKYhYBcgTRdKG2kicfi?usp=sharing).
 
 - **Aplicar las técnicas de escalamiento.**
 
@@ -100,7 +100,7 @@ Se realizaron diversos ajustes, entre ellos, se experimentó con ajustes en el m
 
 Adicionalmente, como se mencionó anteriormente se modificó el dataset, reduciendo las clases de 9 a solamente 5 (Cardboard, Food Organics, Glass, Metal y Plastic).
 
-El modelo final consta de varias capas que se organizan secuencialmente utilizando la clase Sequential de Keras. A continuación se detalla cada capa y su función:
+El modelo añadido en la segunda versión consta de varias capas que se organizan secuencialmente utilizando la clase Sequential de Keras. A continuación se detalla cada capa y su función:
 
 **Capa de Convolución (Conv2D):** Realiza la convolución de los filtros sobre la imagen de entrada para extraer características como bordes, texturas y patrones visuales.
 
@@ -195,7 +195,11 @@ El modelo mejoró en precisión y reducción de pérdida. A pesar de eso, aún e
 
 ![](https://github.com/saidortigoza/MODULO2-TC3002B/blob/main/img/train_val_test_graphs.png)
 
-El modelo actual supera casi en un 10% al anterior en la precisión del conjunto de entrenamiento, y un 5% para el conjunto de validación. Además, la variabilidad se redujo muy significativamente, esto puede ser debido a que se agregó una capa convolutiva de 32 filtros extra, justamente para detectar más la presencia de características específicas de cada imagen que el modelo recibió para aprender. Anteriormente no se incluía la precisión y pérdida del conjunto de prueba, por lo que no hay un punto de comparación, sin embargo, los valores para prueba fueron una pérdida de 0.89 y una precisión del 72%, métricas bastante más cercanas al conjunto de entrenamiento.
+La versión mejorada del modela supera casi en un 10% a la anterior en la precisión del conjunto de entrenamiento, y un 5% para el conjunto de validación. Además, la variabilidad se redujo muy significativamente, esto puede ser debido a que se agregó una capa convolutiva de 32 filtros extra, justamente para detectar más la presencia de características específicas de cada imagen que el modelo recibió para aprender. Anteriormente no se incluía la precisión y pérdida del conjunto de prueba, por lo que no hay un punto de comparación, sin embargo, los valores para prueba fueron una pérdida de 0.89 y una precisión del 72%, métricas bastante más cercanas al conjunto de entrenamiento.
+
+- **Documentar correcciones realizadas**
+
+Se tomó en cuenta la retroalimentación, se muestra la documentación de los cambios en el dataset, se incluyó el conjunto de prueba en los resultados, se agregaron referencias y razonamiento.
 
 ## Referencias
 
