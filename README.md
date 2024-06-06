@@ -199,7 +199,7 @@ La versión mejorada del modela supera casi en un 10% a la anterior en la precis
 
 - **Documentar correcciones realizadas**
 
-Se tomó en cuenta la retroalimentación, se muestra la documentación de los cambios en el dataset, se incluyó el conjunto de prueba en los resultados, se agregaron referencias y razonamiento.
+Se tomó en cuenta la retroalimentación, se muestra la documentación de los cambios en el dataset, se incluyó el conjunto de prueba en los resultados, se agregaron referencias y razonamiento. El modelo puede trabajar y crear predicciones a partir de imágenes externas. Se añadieron los archivos .h y .keras.
 
 ## Referencias
 
